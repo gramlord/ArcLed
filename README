@@ -3,7 +3,7 @@ The ArcLed library allows you to easily flash and blink leds.
 There are many libraries around that let you do this, but none are this easy.
 Take the minimal, do-nothing Arduino sketch, add 7 lines of code, and you have
 a led that's flashing. And not just flashing on and off with set timing,
-flashing with up to 7 different on/off timings.  
+flashing with up to 6 different on/off timings.  
 
 What can you really do with those 7 lines? You can turn a led on. You can
 turn it off. You can make it flash for a number of milli seconds. You can make
