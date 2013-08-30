@@ -1,0 +1,7 @@
+ArcLed	KEYWORD1
+
+setup	KEYWORD2
+on	KEYWORD2
+off	KEYWORD2
+flash	KEYWORD2
+toggle	KEYWORD2
