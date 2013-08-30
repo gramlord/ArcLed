@@ -10,7 +10,7 @@ turn it off. You can make it flash for a number of milli seconds. You can make
 it flash for a number of on-ms and off-ms repeatedly. You can make if flash
 repeatedly 4 times on and off with different ms intervals, and you can make it
 flash on and off repeatedly 6 times with different ms intervales. All with
-those same 6 lines.
+those same 7 lines.
 
 And you can have multiple instances of ArcLed, blinking and flashing
 multiple leds at the same time.
