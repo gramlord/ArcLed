@@ -14,3 +14,6 @@ those same 6 lines.
 
 And you can have multiple instances of ArcLed, blinking and flashing
 multiple leds at the same time.
+
+The ArcLed library uses the ArcSched library, and so does not use delay().
+It will not slow your sketch down.
