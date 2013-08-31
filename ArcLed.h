@@ -19,7 +19,7 @@ class ArcLed {
   public:
     void setup(uint8_t, ArcSched *);
 
-    // These 5 functions define the API.
+    // These functions define the API.
     void on();
     void off();
     void toggle();
