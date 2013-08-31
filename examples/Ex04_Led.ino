@@ -21,8 +21,6 @@ void setup() {
   led.setup(13, &sched);  // pin and scheduler
   
   // Uncomment whichever takes your fancy. All numbers in milli seconds.
-  // led.on();
-  // led.off();
   // led.flash(500);                      // one-off flash for this duration
   // led.flash(50, 1950);                 // on, off repeatedly
   // led.flash(50, 200, 50, 1700);        // on, off, on, off repeatedly
