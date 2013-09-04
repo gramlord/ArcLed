@@ -20,18 +20,18 @@ void ArcLed::setup(uint8_t p, ArcSched *s) {
 }
 
 void ArcLed::on() {
-  char name[10];
+  char name[16];
 
   digitalWrite(pin, HIGH);
-  sprintf(name, "AL%02x", pin);
+  sprintf(name, "AL%02d", pin);
   sched->deregisterFunction(name);
 }
 
 void ArcLed::off() {
-  char name[10];
+  char name[16];
 
   digitalWrite(pin, LOW);
-  sprintf(name, "AL%02x", pin);
+  sprintf(name, "AL%02d", pin);
   sched->deregisterFunction(name);
 }
 
@@ -57,29 +57,29 @@ void _ledFlash(SchedFunctionDetail *fd, void *arg) {
 }
 
 void ArcLed::flash(uint32_t onDuration) {
-  char name[10];
+  char name[16];
 
-  sprintf(name, "AL%02x", pin);
+  sprintf(name, "AL%02d", pin);
   on();
-  sched->registerFunction(_ledFlashOnce, this, name, SchedPriorityLow, onDuration);
+  (void) sched->registerFunction(_ledFlashOnce, this, name, SchedPriorityLow, onDuration);
 }
 
 void ArcLed::flash(uint32_t on0, uint32_t off0) {
-  char name[10];
+  char name[16];
 
-  sprintf(name, "AL%02x", pin);
+  sprintf(name, "AL%02d", pin);
   on();
   ledOnDuration[0] = on0;
   ledOffDuration[0] = off0;
   flashIndex = 0;
   flashIndexMax = 1;
-  sched->registerFunction(_ledFlash, this, name, SchedPriorityLow, on0);
+  (void) sched->registerFunction(_ledFlash, this, name, SchedPriorityLow, on0);
 }
 
 void ArcLed::flash(uint32_t on0, uint32_t off0, uint32_t on1, uint32_t off1) {
-  char name[10];
+  char name[16];
 
-  sprintf(name, "AL%02x", pin);
+  sprintf(name, "AL%02d", pin);
   on();
   ledOnDuration[0] = on0;
   ledOffDuration[0] = off0;
@@ -87,13 +87,13 @@ void ArcLed::flash(uint32_t on0, uint32_t off0, uint32_t on1, uint32_t off1) {
   ledOffDuration[1] = off1;
   flashIndex = 0;
   flashIndexMax = 2;
-  sched->registerFunction(_ledFlash, this, name, SchedPriorityLow, on0);
+  (void) sched->registerFunction(_ledFlash, this, name, SchedPriorityLow, on0);
 }
 
 void ArcLed::flash(uint32_t on0, uint32_t off0, uint32_t on1, uint32_t off1, uint32_t on2, uint32_t off2) {
-  char name[10];
+  char name[16];
 
-  sprintf(name, "AL%02x", pin);
+  sprintf(name, "AL%02d", pin);
   on();
   ledOnDuration[0] = on0;
   ledOffDuration[0] = off0;
@@ -103,5 +103,5 @@ void ArcLed::flash(uint32_t on0, uint32_t off0, uint32_t on1, uint32_t off1, uin
   ledOffDuration[2] = off2;
   flashIndex = 0;
   flashIndexMax = 3;
-  sched->registerFunction(_ledFlash, this, name, SchedPriorityLow, on0);
+  (void) sched->registerFunction(_ledFlash, this, name, SchedPriorityLow, on0);
 }

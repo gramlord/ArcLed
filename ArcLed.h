@@ -9,7 +9,6 @@
 */
 
 #include <Arduino.h>
-#include <sys/types.h>
 #include <ArcSched.h>
 
 #ifndef _ArcLed_h
